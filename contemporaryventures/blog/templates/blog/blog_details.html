@@ -1,0 +1,93 @@
+{% extends 'blog/base_detail.html' %}
+{% block body %}
+{% load static %}
+
+
+		<div class="column column-3-4">
+			<div class="blog clearfix">
+				<div class="post single">
+					{% if post.image %}
+					<a href="#"class="post-image">
+						<div class="post-date">
+							<div class="month">{{ post.created_on|date:'M' }}</div>
+							<h4>{{ post.created_on|date:'d' }}</h4>
+						</div>
+						<img src="{{ post.image.url }}" alt="">
+					</a>
+					{% endif %}
+					<h2><a href="#">{{ post.title}}</a></h2>
+					<div class="post-content-details-container clearfix">
+						<ul class="post-content-details left">
+							<li>{{ post.created_on.date }}</li>
+							<li>in {% for category in post.categories.all %}
+								<a href="{% url 'blog:blog_category' category.name %}"> 
+									{{ category.name }}
+								</a>&nbsp;
+								{% endfor %}</li>
+							<!-- <li>by <a href="team_paige_morgan.html" title="Paige Morgan">Paige Morgan</a></li> -->
+						</ul>
+						<!--	
+							<ul class="post-content-details right">
+								<li class="template-display"><a href="post.html">250</a></li>
+								<li class="template-comment"><a class="scroll-to-comments" href="post.html#comments-list" title="3 comments">3</a></li>
+							</ul>
+						-->
+					</div>
+					<p class="margin-top-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar urna a diam elementum, et bibendum diam ornare. Morbi gravida non ipsum in euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend, ex at facilisis eleifend, est neque sodales purus, sit amet convallis nulla risus non arcu. Sed ullamcorper vitae justo sit amet blandit. Etiam eget iaculis lacus, sed pulvinar orci. Duis at mattis dolor. Nullam vulputate quis ligula vitae vestibulum.</p>
+					<div class="row margin-top-30">
+						<div class="column column-1-2">
+							<blockquote>
+								<p class="template-quote">Proin euismod ex ornare congue lobortis. Vivamus gravida quam ut orci sagittis aliquam. Curabitur dignissim mauris in urna ullamcorper posuere.</p>
+							</blockquote>
+						</div>
+						<div class="column column-1-2">
+							<p class="padding-top-0">Donec lacus neque, luctus ut tortor eu, pharetra congue lectus. Vivamus lobortis diam sed dolor feugiat, ut finibus risus vehicula. Aliquam scelerisque auctor consequat. Nullam semper turpis quis turpis ornare, sed aliquam risus venenatis.</p>
+							<p>Phasellus vitae lectus ac elit volutpat aliquam. Nullam vel metus sit amet risus rhoncus convallis. Nam laoreet, turpis a molestie tristique, nibh sem fermentum velit, at commodo risus sem sed ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar urna a diam elementum, etos bibendum ornare morbi gravida non ipsum in euismod.</p>
+						</div>
+					</div>
+					<div class="row margin-top-10">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar urna a diam elementum, et bibendum diam ornare. Morbi gravida non ipsum in euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend, ex at facilisis eleifend, est neque sodales purus, sit amet convallis nulla risus non arcu. Sed ullamcorper vitae justo sit amet blandit. Etiam eget iaculis lacus, sed pulvinar orci. Duis at mattis dolor. Nullam vulputate quis ligula vitae vestibulum.</p>
+						<h3>Keep your home sparkling</h3>
+						<p>Proin euismod ex ornare congue lobortis. Vivamus gravida quam ut orci sagittis aliquam. Curabitur dignissim mauris in urna ullamcorper posuere. Quisque in elementum urna, id mattis urna. Mauris auctor purus id nulla dictum ultrices sit amet vitae neque. Morbi eleifend semper dui in imperdiet. Donec ac justo aliquam, rutrum sapien in, scelerisque metus. Fusce dui erat, accumsan vel porttitor tristique, ultricies eget ex.</p>
+						<h3>Things that matter</h3>
+						<p>Proin euismod ex ornare congue lobortis. Vivamus gravida quam ut orci sagittis aliquam. Curabitur dignissim mauris in urna ullamcorper posuere. Quisque in elementum urna, id mattis urna. Mauris auctor purus id nulla dictum ultrices sit amet vitae neque. Morbi eleifend semper dui in imperdiet. Donec ac <a href="#">justo aliquam</a>, rutrum sapien in, <a href="#">scelerisque metus</a>. Fusce dui erat, accumsan vel porttitor tristique, ultricies eget ex.</p>
+					</div>
+					<ul class="taxonomies margin-top-30 clearfix">
+						<li><a href="#" title="Cleaning Tips">Cleaning Tips</a></li>
+						<li><a href="#" title="Green Cleaning">Green Cleaning</a></li>
+						<li><a href="#" title="Home">Home</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--{{ request.build_absolute_uri }}-->
+			<!---->
+			<div class="fb-like" data-href="{{ request.build_absolute_uri }}" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
+			<div class="fb-comments" data-href="{{ request.build_absolute_uri }}" data-width="870" data-numposts="5" data-colorscheme="dark"></div>
+			
+			<!---->
+		</div>
+
+		{% endblock %}
+<!--
+<div class='col-md-8 offset-md-2'>
+    <h1>{{ post.title}}</h1>
+    <small>
+        {{ post.created_on.date }} |&nbsp;
+        Categories:&nbsp;
+        {% for category in post.categories.all %}
+        <a href="{% url 'blog:blog_category' category.name %}"> 
+            {{ category.name }}
+        </a>&nbsp;
+        {% endfor %}
+    </small><br>
+        {% if post.image %}
+        <img src = '{{ post.image.url }}' class = 'img-responsive'>
+        {% endif %}
+    <p>{{ post.body | linebreaks }}</p>
+  
+    <h3>Comments:</h3>
+    
+</div>
+
+-->
+

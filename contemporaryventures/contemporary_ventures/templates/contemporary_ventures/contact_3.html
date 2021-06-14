@@ -1,0 +1,92 @@
+{% extends 'contemporary_ventures/base_5.html' %}
+{% block body %}
+{% load static %}
+			<div class="row gray full-width page-header vertical-align-table">
+				<div class="row">
+					<div class="page-header-left">
+						<h1>CONTACT US</h1>
+					</div>
+					<div class="page-header-right">
+						<div class="bread-crumb-container">
+							<ul class="bread-crumb">
+								<li>
+									<a title="Home" href="{% url 'contemporary_ventures:cv_index' %}">
+										Home
+									</a>
+								</li>
+								<li class="separator">
+									&#47;
+								</li>
+								<li>
+									Contact Us
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class="theme-page">
+				<div class="row full-width header-background header-background-4"></div>
+				<div class="clearfix">
+					<div class="row page-margin-top-section">
+						<ul class="features-list clearfix">
+							<li class="column column-1-4">
+								<div class="icon features-map"></div>
+								<h4>CONTEMPORARY VENTURES</h4>
+								<p>531 Ikorodu Road<br>Ikosi Lagos</p>
+							</li>
+							<li class="column column-1-4 ">
+								<div class="icon features-phone"></div>
+								<h4>PHONE</h4>
+								<p>Phone: <a href="tel:08033349610">080 3334 9610</a><br>Mobile: <a href="tel:08022279240">080 2227 9240</a></p>
+							</li>
+							<li class="column column-1-4 column-33">
+								<div class="icon features-email"></div>
+								<h4>EMAIL</h4>
+								<p><a href="mailto:contact-us@contemporaryventures.com.ng">contact-us@contemporaryventures.com.ng</a></p>
+							</li>
+							<li class="column column-1-4 column-34">
+								<div class="icon features-clock"></div>
+								<h4>BUSINESS HOURS</h4>
+								<p>Weekdays: 8.00 am - 5.00 pm<br>Saturday: 8.00 am - 2.00 pm</p>
+							</li>
+						</ul>
+					</div>
+					<div class="row margin-top-67">
+						<form class="contact-form" method="POST" action="{% url 'contemporary_ventures:contact' %}">
+							{% csrf_token %}
+    						
+							<div class="row flex-box">
+								<fieldset class="column column-1-2">
+									<label>YOUR NAME</label>
+									{{ form.your_name }}
+									<label>YOUR EMAIL</label>
+									{{ form.your_email }}
+									<label>YOUR PHONE</label>
+									{{ form.your_phone }}
+								</fieldset>
+								<fieldset class="column column-1-2">
+									<label>MESSAGE</label>
+									{{ form.message }}
+								</fieldset>
+							</div>
+							<div class="row margin-top-30">
+								<div class="column column-1-1">
+									<input type="hidden" name="action" value="contact_form" />
+									<div class="row margin-top-15 padding-bottom-16 align-center">
+										<button type="submit" class="more submit-contact-form">Send message</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="row full-width page-margin-top-section">
+						<div class="contact-map" id="map" data-scroll-wheel="0"></div>
+					</div>
+				</div>
+			</div>
+
+			{% endblock %}
+
+			

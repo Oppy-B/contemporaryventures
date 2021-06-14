@@ -1,0 +1,67 @@
+{% extends 'contemporary_ventures/base_service.html' %}
+{% block body %}
+{% load static %}
+			<div class="theme-page padding-bottom-100">
+				<div class="row gray full-width page-header vertical-align-table">
+					<div class="row">
+						<div class="page-header-left">
+							<h1>OUR SERVICES</h1>
+						</div>
+						<div class="page-header-right">
+							<div class="bread-crumb-container">
+								<ul class="bread-crumb">
+									<li>
+										<a title="Home" href="{% url 'contemporary_ventures:cv_index' %}">
+											Home
+										</a>
+									</li>
+									<li class="separator">
+										&#47;
+									</li>
+									<li>
+										Our Services
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix">
+					<div class="row page-margin-top-section">
+						<ul class="services-list gray clearfix">
+							<li>
+								<a href="{% url 'contemporary_ventures:service_house_cleaning' %}" title="House Cleaning">
+									<img src="images/samples/370x246/placeholder.jpg" alt="">
+								</a>
+								<h4 class="box-header"><a href="{% url 'contemporary_ventures:service_house_cleaning' %}" title="House Cleaning">HOUSE CLEANING</a></h4>
+								<p>Complete apartment and house cleaning services by professional cleaners.</p>
+							</li>
+							<li>
+								<a href="{% url 'contemporary_ventures:service_post_renovation' %}" title="Post Renovation">
+									<img src="images/samples/370x246/placeholder.jpg" alt="">
+								</a>
+								<h4 class="box-header"><a href="{% url 'contemporary_ventures:service_post_renovation' %}" title="Post Renovation">POST RENOVATION</a></h4>
+								<p>Get rid of the dust left behind after construction or renovation.</p>
+							</li>
+							
+							
+							<li>
+								<a href="{% url 'contemporary_ventures:service_commercial_cleaning' %}" title="Commercial Cleaning">
+									<img src="images/samples/370x246/placeholder.jpg" alt="">
+								</a>
+								<h4 class="box-header"><a href="{% url 'contemporary_ventures:service_commercial_cleaning' %}" title="Commercial Cleaning">COMMERCIAL CLEANING</a></h4>
+								<p>Only the most skilled professionals for commercial office cleaning.</p>
+							</li>
+							<li>
+								<a href="{% url 'contemporary_ventures:service_window_cleaning' %}" title="Window Cleaning">
+									<img src="images/samples/370x246/placeholder.jpg" alt="">
+								</a>
+								<h4 class="box-header"><a href="{% url 'contemporary_ventures:service_window_cleaning' %}" title="Window Cleaning">WINDOW CLEANING</a></h4>
+								<p>The highest quality window cleaning service at a competitive price.</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+		{% endblock %}

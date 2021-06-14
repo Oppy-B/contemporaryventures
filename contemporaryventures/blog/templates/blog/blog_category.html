@@ -1,0 +1,89 @@
+{% extends 'blog/base_category.html' %}
+{% block body %}
+{% load static %}
+			
+		<div class="column column-3-4">
+			<ul class="blog clearfix">
+				{% for post in posts %}
+				<li>
+					{% if post.image %}
+					<a href="{% url 'blog:blog_detail' post.slug %}" class="post-image">
+						<div class="post-date">
+							<div class="month">{{ post.created_on|date:'M' }}</div>
+							<h4>{{ post.created_on|date:'d' }}</h4>
+						</div>
+						<img src="{{ post.image.url }}" alt="">
+					</a>
+					{% endif %}
+					<h2><a href="{% url 'blog:blog_detail' post.slug %}">{{ post.title }}</a></h2>
+					<div class="post-content-details-container clearfix">
+						<ul class="post-content-details left">
+							<li>{{ post.created_on.date }}</li>
+							<li>in {% for category in post.categories.all %}
+								<a href="{% url 'blog:blog_category' category.name %}">
+									{{ category.name }}
+								</a>&nbsp;
+								{% endfor %}</li>
+							<li>by <a href="team_paige_morgan.html" title="Paige Morgan">Paige Morgan</a></li>
+						</ul>
+						<ul class="post-content-details right">
+							<li class="template-display"><a href="post.html">250</a></li>
+							<li class="template-comment"><a href="post.html#comments-list" title="3 comments">3</a></li>
+						</ul>
+					</div>
+					<p>{{ post.body | slice:":400" }}... <a href="{% url 'blog:blog_detail' post.slug %}" >Read more</a></p>
+				</li>
+
+				{% endfor %}
+				
+				
+			</ul>
+		
+			<ul class="pagination page-margin-top">
+				<li class="left">
+					<a href="#" title="" class="template-arrow-horizontal-3">&nbsp;</a>
+				</li>
+				<li class="selected">
+					<a href="#" title="">
+						1
+					</a>
+				</li>
+				<li>
+					<a href="#" title="">
+						2
+					</a>
+				</li>
+				<li>
+					<a href="#" title="">
+						3
+					</a>
+				</li>
+				<li class="right">
+					<a href="#" title="" class="template-arrow-horizontal-3">&nbsp;</a>
+				</li>
+			</ul>
+		</div>
+
+
+		{% endblock %}
+
+<!--
+<div class="col-md-8 offset-md-2">
+    <h1>{{ category | title }}</h1>
+    <hr>
+    {% for post in posts %}
+        <h2><a href="{% url 'blog:blog_detail' post.pk%}">{{ post.title }}</a></h2>
+        <small>
+            {{ post.created_on.date }} |&nbsp;
+            Categories:&nbsp;
+            {% for category in post.categories.all %}
+            <a href="{% url 'blog:blog_category' category.name %}">
+                {{ category.name }}
+            </a>&nbsp;
+            {% endfor %}
+        </small>
+        <p>{{ post.body | slice:":400" }}...</p>
+    {% endfor %}
+</div>
+
+-->

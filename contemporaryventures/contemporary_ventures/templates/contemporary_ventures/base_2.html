@@ -1,0 +1,398 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ContemporaryVentures - General Industrial, Residential and Post Contruction Cleaning</title>
+		<!--meta-->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.2" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="keywords" content="Clean, Cleaning, Maid, Laundry, Car Cleaning, Gardening, Janitorial, Move In Out, Window Cleaning" />
+		<!--<meta name="description" content="ContemporaryVentures - General Industrial and Post Contruction Cleaning" />-->
+		<!--slider revolution-->
+		<link rel="stylesheet" type="text/css" href="{% static 'contemporary_ventures/rs-plugin/css/settings.css' %}" >
+		<!--style-->
+		<link href='//fonts.googleapis.com/css?family=Raleway:300,400,500&amp;subset=latin-ext' rel='stylesheet' type='text/css'>
+		<link href='//fonts.googleapis.com/css?family=Lato:300,400,700,900&amp;subset=latin-ext' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="{% static 'contemporary_ventures/style/reset.css' %}" >
+		<link rel="stylesheet" type="text/css" href="{% static 'contemporary_ventures/style/superfish.css' %}" >
+		<link rel="stylesheet" type="text/css" href="{% static 'contemporary_ventures/style/prettyPhoto.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'contemporary_ventures/style/jquery.qtip.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'contemporary_ventures/style/style.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'contemporary_ventures/style/animations.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'contemporary_ventures/style/responsive.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'contemporary_ventures/style/odometer-theme-default.css' %}">
+		<!--fonts-->
+		<link rel="stylesheet" type="text/css" href="{% static 'contemporary_ventures/fonts/features/style.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'contemporary_ventures/fonts/template/style.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'contemporary_ventures/fonts/social/style.css' %}">
+		<link rel="shortcut icon" href="images/favicon.ico">
+	</head>
+	<body>
+		<div class="site-container">
+            <div class="header-top-bar-container clearfix">
+                <div class="header-top-bar">
+                    <ul class="contact-details clearfix">
+                        <li class="template-location">
+                            531 Ikorodu Road, Lagos
+                        </li>
+                        <li class="template-mobile">
+                            <a href="tel:08033349610">080 3334 9610</a>
+                        </li>
+                        <li class="template-clock">
+                            08.00 am - 05.00 pm
+                        </li>
+                    </ul>
+                    <ul class="social-icons">
+                        <li class="show-on-mobiles">
+                            <a class="template-search" href="#" title="Search"></a>
+                            <form class="search">
+                                <input type="text" name="s" placeholder="Type and hit enter..." value="Type and hit enter..." class="search-input hint">
+                                <fieldset class="search-submit-container">
+                                    <span class="template-search"></span>
+                                    <input type="submit" class="search-submit" value="">
+                                </fieldset>
+                                <input type="hidden" name="page" value="search">
+                            </form>
+                        </li>
+
+                        <li>
+                            <a target="_blank" href="https://facebook.com/#" class="social-facebook" title="facebook"></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://twitter.com/#" class="social-twitter" title="twitter"></a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/#" class="social-instagram" title="instagram"></a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="header-toggle template-arrow-vertical-3"></a>
+            </div>
+            <div class="header-container sticky">
+                <div class="header clearfix">
+                    <div class="menu-container first-menu clearfix">
+                        <nav>
+                            <ul class="sf-menu">
+                                <li>
+                                    <a href="{% url 'contemporary_ventures:cv_index' %}" title="Home">
+                                        HOME
+                                    </a>
+                                <!--REMOVE HOME 2-->
+                                </li>
+                                <li>
+                                    <a href="{% url 'contemporary_ventures:about_us' %}" title="Pages">
+                                        ABOUT US
+                                    </a>
+                                <!--DELETED -->
+                                </li>
+
+                                </li>
+                                <li>
+                                    <a href="{% url 'contemporary_ventures:services' %}" title="Services">
+                                        SERVICES
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="{% url 'contemporary_ventures:service_house_cleaning' %}" title="House Cleaning">
+                                                House Cleaning
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'contemporary_ventures:service_post_renovation' %}" title="Post Renovation">
+                                                Post Renovation
+                                            </a>
+                                        </li>
+
+
+                                        <li>
+                                            <a href="{% url 'contemporary_ventures:service_commercial_cleaning' %}" title="Commercial Cleaning">
+                                                Commercial Cleaning
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'contemporary_ventures:service_window_cleaning' %}" title="Window Cleaning">
+                                                Window Cleaning
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="selected">
+                                    <a href="{% url 'contemporary_ventures:project' %}" title="Projects">
+                                        PROJECTS
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="{% url 'contemporary_ventures:proj_apartment_cleaning' %}" title="Apartment Cleaning">
+                                                Apartment Cleaning
+                                            </a>
+                                        </li>
+
+
+                                        <li>
+                                            <a href="{% url 'contemporary_ventures:project_after_renovation_cleaning' %}" title="After Renovation Cleaning">
+                                                After Renovation Cleaning
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="mobile-menu-container">
+                            <nav>
+                                <ul class="mobile-menu collapsible-mobile-submenus">
+                                    <li><a class="template-arrow-vertical-3" href="#">&nbsp;</a></li>
+                                    <li class="selected">
+                                        <a href="{% url 'contemporary_ventures:cv_index' %}" title="Home">
+                                            HOME
+                                        </a>
+
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'contemporary_ventures:about_us' %}" title="Pages">
+                                            ABOUT US
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{% url 'contemporary_ventures:services' %}" title="Services">
+                                            SERVICES
+                                        </a>
+                                        <a href="#" class="template-arrow-menu"></a>
+                                        <ul>
+                                            <li>
+                                                <a href="{% url 'contemporary_ventures:service_house_cleaning' %}" title="House Cleaning">
+                                                    House Cleaning
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url 'contemporary_ventures:service_post_renovation' %}" title="Post Renovation">
+                                                    Post Renovation
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="{% url 'contemporary_ventures:service_commercial_cleaning' %}" title="Commercial Cleaning">
+                                                    Commercial Cleaning
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url 'contemporary_ventures:service_window_cleaning' %}" title="Window Cleaning">
+                                                    Window Cleaning
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class='selected'>
+                                        <a href="{% url 'contemporary_ventures:project' %}" title="Projects">
+                                            PROJECTS
+                                        </a>
+                                        <a href="#" class="template-arrow-menu"></a>
+                                        <ul>
+                                            <li>
+                                                <a href="{% url 'contemporary_ventures:proj_apartment_cleaning' %}" title="Apartment Cleaning">
+                                                    Apartment Cleaning
+                                                </a>
+                                            </li>
+
+
+                                            <li>
+                                                <a href="{% url 'contemporary_ventures:project_after_renovation_cleaning' %}" title="After Renovation Cleaning">
+                                                    After Renovation Cleaning
+                                                </a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a href="{% url 'contemporary_ventures:contact' %}" title="Contact">
+                                            CONTACT
+                                        </a>
+
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="logo">
+                        <h1>
+                            <a href="{% url 'contemporary_ventures:cv_index' %}" title="ContemporaryVentures">
+                                <img src="{% static 'contemporary_ventures/images/logo.png' %}" srcset="{% static 'contemporary_ventures/images/logo_retina.png' %} 2x" class="primary-logo" alt="logo">
+                                <img src="{% static 'contemporary_ventures/images/logo_transparent.png' %}" srcset="{% static 'contemporary_ventures/images/logo_transparent_retina.png' %} 2x" class="secondary-logo" alt="logo">
+                                <span class="logo-text">ContemporaryVentures</span>
+                            </a>
+                        </h1>
+                        <div class="logo-clone">
+                            <h1>
+                                <a href="{% url 'contemporary_ventures:cv_index' %}" title="ContemporaryVentures">
+                                    <img src="{% static 'contemporary_ventures/images/logo.png' %}" srcset="{% static 'contemporary_ventures/images/logo_retina.png' %} 2x" class="primary-logo" alt="logo">
+                                    <img src="{% static 'contemporary_ventures/images/logo_transparent.png' %}" srcset="{% static 'contemporary_ventures/images/logo_transparent_retina.png' %} 2x" class="secondary-logo" alt="logo">
+                                    <span class="logo-text">ContemporaryVentures</span>
+                                </a>
+                            </h1>
+                        </div>
+                    </div>
+                    <a href="#" class="mobile-menu-switch">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </a>
+                    <div class="menu-container clearfix second-menu">
+                        <nav>
+                            <ul class="sf-menu">
+
+                                <li>
+                                    <a href="{% url 'blog:blog_index' %}" title="Blog">
+                                        BLOG
+                                    </a>
+
+                                </li>
+
+                                <li class="left-flyout">
+                                    <a href="{% url 'contemporary_ventures:contact' %}" title="Contact">
+                                        CONTACT
+                                    </a>
+
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header-icons-container hide-on-mobiles">
+                        <a class="template-search" href="#" title="Search"></a>
+                        <form class="search">
+                            <input type="text" name="s" placeholder="Type and hit enter..." value="Type and hit enter..." class="search-input hint">
+                            <fieldset class="search-submit-container">
+                                <span class="template-search"></span>
+                                <input type="submit" class="search-submit" value="">
+                            </fieldset>
+                            <input type="hidden" name="page" value="search">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!--footer-->
+            {% block body %}
+            {% endblock %}
+
+            <div class="row dark footer-row full-width padding-top-30">
+				<div class="row padding-bottom-33 padding-left-250">
+					<div class="column column-1-3 column-30">
+						<ul class="contact-details-list">
+							<li class="features-phone">
+								<label>CALL US TODAY</label>
+								<p><a href="tel:08033349610">080 3334 9610</a></p>
+							</li>
+						</ul>
+					</div>
+					<div class="column column-1-3">
+						<ul class="contact-details-list">
+							<li class="features-map">
+								<label>IKOSI, LAGOS</label>
+								<p>531 Ikorodu Road</p>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+			<div class="row dark-gray footer-row full-width padding-top-61 padding-bottom-36">
+				<div class="row row-4-4">
+					<div class="column column-1-4">
+						<h6>ABOUT US</h6>
+						<p class="margin-top-23">Suspendisse sit amet ante eu purus iaculis aliquam eu ultricies eros. Donec blandit vulputate ipsum, in tincidunt leo elementum eget. Suspendisse id purus euismod</p>
+						<p>Our focus is to listen to our clients, understand their needs and provide the exceptional level of cleaning service.</p>
+						<div class="margin-top-37 padding-bottom-16">
+							<a class="more gray" href="{% url 'contemporary_ventures:about_us' %}" title="Learn more">Learn more</a>
+						</div>
+					</div>
+					<div class="column column-1-4">
+						<h6>OUR SERVICES</h6>
+						<ul class="list margin-top-31">
+							<li class="template-arrow-horizontal-2"><a href="{% url 'contemporary_ventures:service_commercial_cleaning' %}" title="Commercial Cleaning">Commercial Cleaning</a></li>
+							<li class="template-arrow-horizontal-2"><a href="{% url 'contemporary_ventures:service_house_cleaning' %}" title="House Cleaning">House Cleaning</a></li>
+
+							<li class="template-arrow-horizontal-2"><a href="{% url 'contemporary_ventures:service_post_renovation' %}" title="Post Renovation">Post Renovation</a></li>
+							<li class="template-arrow-horizontal-2"><a href="{% url 'contemporary_ventures:service_window_cleaning' %}" title="Window Cleaning">Window Cleaning</a></li>
+
+
+						</ul>
+					</div>
+
+                    <div class="column column-1-4">
+						<h6>LATEST POSTS</h6>
+						<ul class="latest-post margin-top-42">
+
+                            {% for subpost in first_3_post %}
+                            <li>
+                                
+                                    <a href="{% url 'blog:blog_detail' subpost.slug %}">{{ subpost.title }}</a>
+                                    <abbr>{{ subpost.created_on }}</abbr>
+                            </li>
+                            {% endfor %}
+						</ul>
+					</div>
+
+					<div class="column column-1-4">
+						<h6>CONTACT INFO</h6>
+						<ul class="contact-data margin-top-20">
+							<li class="template-location"><div class="value">531 Ikorodu Road, Ikosi, Lagos</div></li>
+							<li class="template-mobile"><div class="value"><a href="tel:08064403340">080 3334 9610</a></div></li>
+							<li class="template-email"><div class="value"><a href="mailto:contact-us@ContemporaryVentures.com.ng">contact-us@ContemporaryVentures.com.ng</a></div></li>
+							<li class="template-clock"><div class="value">Mon-Fri: 08.00 am - 05.00 pm</div></li>
+							<li class="template-clock"><div class="value">Saturday, Sunday: closed</div></li>
+						</ul>
+					</div>
+				</div>
+				<div class="row page-padding-top">
+					<ul class="social-icons align-center">
+						<li>
+							<a target="_blank" href="https://twitter.com/QuanticaLabs" class="social-twitter" title="twitter"></a>
+						</li>
+						<li>
+							<a href="https://instagram.com/quanticalabs/" class="social-instagram" title="instagram"></a>
+						</li>
+						<li>
+							<a target="_blank" href="https://facebook.com/QuanticaLabs" class="social-facebook" title="facebook"></a>
+						</li>
+					</ul>
+				</div>
+				<div class="row align-center padding-top-30">
+
+				</div>
+			</div>
+        </div>
+
+        <a href="#top" class="scroll-top animated-element template-arrow-vertical-3" title="Scroll to top"></a>
+		<div class="background-overlay"></div>
+		<!--js-->
+		<script type="text/javascript" src="{% static 'contemporary_ventures/js/jquery-1.12.4.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'contemporary_ventures/js/jquery-migrate-1.4.1.min.js' %}"></script>
+		<!--slider revolution-->
+		<script type="text/javascript" src="{% static 'contemporary_ventures/rs-plugin/js/jquery.themepunch.tools.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'contemporary_ventures/rs-plugin/js/jquery.themepunch.revolution.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'contemporary_ventures/js/jquery.ba-bbq.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'contemporary_ventures/js/jquery-ui-1.12.1.custom.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'contemporary_ventures/js/jquery.ui.touch-punch.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'contemporary_ventures/js/jquery.isotope.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'contemporary_ventures/js/jquery.easing.1.3.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'contemporary_ventures/js/jquery.carouFredSel-6.2.1-packed.js' %}"></script>
+		<script type="text/javascript" src="{% static 'contemporary_ventures/js/jquery.touchSwipe.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'contemporary_ventures/js/jquery.transit.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'contemporary_ventures/js/jquery.timeago.js' %}"></script>
+		<script type="text/javascript" src="{% static 'contemporary_ventures/js/jquery.hint.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'contemporary_ventures/js/jquery.costCalculator.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'contemporary_ventures/js/jquery.parallax.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'contemporary_ventures/js/jquery.prettyPhoto.js' %}"></script>
+		<script type="text/javascript" src="{% static 'contemporary_ventures/js/jquery.qtip.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'contemporary_ventures/js/jquery.blockUI.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'contemporary_ventures/js/main.js' %}"></script>
+        <script type="text/javascript" src="{% static 'contemporary_ventures/js/odometer.min.js' %}"></script>
+        {% block footer %}
+        {% endblock %}
+	</body>
+</html>

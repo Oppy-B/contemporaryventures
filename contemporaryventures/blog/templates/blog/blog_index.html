@@ -1,0 +1,222 @@
+{% extends 'blog/base_2.html' %}
+{% block body %}
+{% load static %}
+			
+						<div class="column column-3-4">
+							<ul class="blog small clearfix">
+
+						
+								
+
+								<!--start forloop-->
+								<!--First for loop-->
+							
+								<li>
+									
+									{% for post in page_obj %}
+									{% if post.image %}
+
+									<a href="{% url 'blog:blog_detail' post.slug %}" class="post-image">
+										<div class="post-date">
+											<div class="month">{{ post.created_on|date:'M' }}</div>
+											<h4>{{ post.created_on|date:'d' }}</h4>
+										</div>
+										<img src="{{ post.image.url }}" alt="">
+									</a>
+
+									{% endif %}
+
+									<div class="post-content">
+										<h3><a href="{% url 'blog:blog_detail' post.slug %}">{{ post.title }}</a></h3>
+										<div class="post-content-details-container clearfix">
+											<ul class="post-content-details">
+												<li>{{ post.created_on.date }}</li>
+												<li>in {% for category in post.categories.all %}
+													<a href="{% url 'blog:blog_category' category.name %}">
+				
+														{{ category.name }}</a>&nbsp;
+														{% endfor %}</li>
+												<li>by <a href="team_paige_morgan.html" title="Paige Morgan">Paige Morgan</a></li>
+											</ul>
+										</div>
+										<p>{{ post.body | slice:":400" }}...<a href="{% url 'blog:blog_detail' post.slug %}" title="Read more">Read more</a></p>
+										
+										<div class="post-content-details-container clearfix">
+											<ul class="post-content-details">
+												<li class="template-display"><a href="{% url 'blog:blog_detail' post.slug %}">250</a></li>
+												<li class="template-comment"><a href="post.html#comments-list" title="3 comments">3</a></li>
+											</ul>
+										</div>
+									
+									</div>
+								</li>
+
+								{% endfor %}
+
+								
+							
+							</ul>
+
+								<!--End of first for loop-->
+
+								<!--
+								<li>
+									<a href="post.html" title="10 ways to save more &amp; waste less" class="post-image">
+										<div class="post-date">
+											<div class="month">AUG</div>
+											<h4>22</h4>
+										</div>
+										<img src="images/samples/480x320/placeholder.jpg" alt="">
+									</a>
+									<div class="post-content">
+										<h3><a href="post.html">10 ways to save more &amp; waste less</a></h3>
+										<div class="post-content-details-container clearfix">
+											<ul class="post-content-details">
+												<li>August 22, 2017</li>
+												<li>in <a href="category.html" title="Commercial Cleaning">Commercial Cleaning</a></li>
+												<li>by <a href="team_paige_morgan.html" title="Paige Morgan">Paige Morgan</a></li>
+											</ul>
+										</div>
+										<p>Donec lacus neque luctus ut tortor eu pharetra congue lectus. Vivamus lobortis diam sed dolor feugiat, ut finibus risus vehicula vitae lectus ac elit auctor consequat. Nullam semper turpis quis turpis ornare sed aliquam risus venenatis... <a href="post.html" title="Read more">Read more</a></p>
+										<div class="post-content-details-container clearfix">
+											<ul class="post-content-details">
+												<li class="template-display"><a href="post.html">350</a></li>
+												<li class="template-comment"><a href="post.html#comments-list" title="5 comments">5</a></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="post.html" title="Before move-in cleaning checklist" class="post-image">
+										<div class="post-date">
+											<div class="month">JUL</div>
+											<h4>10</h4>
+										</div>
+										<img src="images/samples/480x320/placeholder.jpg" alt="">
+									</a>
+									<div class="post-content">
+										<h3><a href="post.html">Before move-in cleaning checklist</a></h3>
+										<div class="post-content-details-container clearfix">
+											<ul class="post-content-details">
+												<li>July 10, 2017</li>
+												<li>in <a href="category.html" title="Move In Out Service">Move In Out Service</a></li>
+												<li>by <a href="team_paige_morgan.html" title="Paige Morgan">Paige Morgan</a></li>
+											</ul>
+										</div>
+										<p>Donec lacus neque luctus ut tortor eu pharetra congue lectus. Vivamus lobortis diam sed dolor feugiat, ut finibus risus vehicula vitae lectus ac elit auctor consequat. Nullam semper turpis quis turpis ornare sed aliquam risus venenatis... <a href="post.html" title="Read more">Read more</a></p>
+										<div class="post-content-details-container clearfix">
+											<ul class="post-content-details">
+												<li class="template-display"><a href="post.html">1 230</a></li>
+												<li class="template-comment"><a href="post.html#comments-list" title="5 comments">5</a></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="post.html" title="What to look for in green cleaning" class="post-image">
+										<div class="post-date">
+											<div class="month">JUN</div>
+											<h4>05</h4>
+										</div>
+										<img src="images/samples/480x320/placeholder.jpg" alt="">
+									</a>
+									<div class="post-content">
+										<h3><a href="post.html">What to look for in green cleaning</a></h3>
+										<div class="post-content-details-container clearfix">
+											<ul class="post-content-details">
+												<li>June 05, 2017</li>
+												<li>in <a href="category.html" title="Window Cleaning">Window Cleaning</a></li>
+												<li>by <a href="team_paige_morgan.html" title="Paige Morgan">Paige Morgan</a></li>
+											</ul>
+										</div>
+										<p>Donec lacus neque luctus ut tortor eu pharetra congue lectus. Vivamus lobortis diam sed dolor feugiat, ut finibus risus vehicula vitae lectus ac elit auctor consequat. Nullam semper turpis quis turpis ornare sed aliquam risus venenatis... <a href="post.html" title="Read more">Read more</a></p>
+										<div class="post-content-details-container clearfix">
+											<ul class="post-content-details">
+												<li class="template-display"><a href="post.html">230</a></li>
+												<li class="template-comment"><a href="post.html#comments-list" title="5 comments">5</a></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="post.html" title="Best pro tips for home cleaning" class="post-image">
+										<div class="post-date">
+											<div class="month">APR</div>
+											<h4>25</h4>
+										</div>
+										<img src="images/samples/480x320/placeholder.jpg" alt="">
+									</a>
+									<div class="post-content">
+										<h3><a href="post.html">Best pro tips for home cleaning</a></h3>
+										<div class="post-content-details-container clearfix">
+											<ul class="post-content-details">
+												<li>April 25, 2017</li>
+												<li>in <a href="category.html" title="Engine">House Cleaning</a></li>
+												<li>by <a href="team_paige_morgan.html" title="Paige Morgan">Paige Morgan</a></li>
+											</ul>
+										</div>
+										<p>Donec lacus neque luctus ut tortor eu pharetra congue lectus. Vivamus lobortis diam sed dolor feugiat, ut finibus risus vehicula vitae lectus ac elit auctor consequat. Nullam semper turpis quis turpis ornare sed aliquam risus venenatis... <a href="post.html" title="Read more">Read more</a></p>
+										<div class="post-content-details-container clearfix">
+											<ul class="post-content-details">
+												<li class="template-display"><a href="post.html">2 325</a></li>
+												<li class="template-comment"><a href="post.html#comments-list" title="5 comments">5</a></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+							</ul>
+
+						 -->
+
+							<!--stop forloop-->		
+							<ul class="pagination margin-top-70">
+										<!--
+										<li class="left">
+											<a href="#" title="" class="template-arrow-horizontal-3">&nbsp;</a>
+										</li>
+										<li class="selected">
+											<a href="#" title="">
+												1
+											</a>
+										</li>
+										<li>
+											<a href="#" title="">
+												2
+											</a>
+										</li>
+										<li>
+											<a href="#" title="">
+												3
+											</a>
+										</li>
+										<li class="right">
+											<a href="#" title="" class="template-arrow-horizontal-3">&nbsp;</a>
+										</li>
+
+									-->
+							
+									<div class="pagination">
+										<span class="step-links">
+											{% if page_obj.has_previous %}
+												<a href="?{{ page_request_var}}=1">&laquo; first</a>
+												<a href="?{{ page_request_var }}={{ page_obj.previous_page_number }}{% if request.Get.q %}&q={{request.GET.q}}{% endif %}">previous</a>
+											{% endif %}
+									
+											<span class="current">
+												Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+											</span>
+									
+											{% if page_obj.has_next %}
+												<a href="?{{page_request_var }}={{ page_obj.next_page_number }}{% if request.Get.q %}&q={{request.GET.q}}{% endif %}">next</a>
+												<a href="?{{ page_request_var }}={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+											{% endif %}
+										</span>
+									</div>
+
+							</ul>
+						</div>
+						
+			
+
+		
+		{% endblock %}

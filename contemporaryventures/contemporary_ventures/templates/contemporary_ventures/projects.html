@@ -1,0 +1,88 @@
+{% extends 'contemporary_ventures/base_2.html' %}
+{% block body %}
+{% load static %}
+			
+			<div class="theme-page padding-bottom-100">
+				<div class="row gray full-width page-header vertical-align-table">
+					<div class="row">
+						<div class="page-header-left">
+							<h1>SELECTED PROJECTS</h1>
+						</div>
+						<div class="page-header-right">
+							<div class="bread-crumb-container">
+								<ul class="bread-crumb">
+									<li>
+										<a title="Home" href="{% url 'contemporary_ventures:cv_index' %}">
+											Home
+										</a>
+									</li>
+									<li class="separator">
+										&#47;
+									</li>
+									<li>
+										Projects
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix">
+					<div class="row page-margin-top-section">
+						<ul class="tabs-navigation small isotope-filters clearfix">
+							<li><a class="selected" href="#filter-*" title="Show all">Show all</a></li>
+							<li><a href="#filter-apartment" title="Apartment">Apartment</a></li>
+							
+							<li><a href="#filter-industrial" title="Industrial">Industrial</a></li>
+						
+						</ul>
+						<ul class="projects-list isotope">
+							<li class="apartment">
+								<a href="{% url 'contemporary_ventures:proj_apartment_cleaning' %}" title="Apartment Cleaning">
+									<img src="images/samples/370x246/placeholder.jpg" alt="">
+								</a>
+								<div class="view align-center">
+									<div class="vertical-align-table">
+										<div class="vertical-align-cell">
+											<p>Apartment Cleaning</p>
+											<a class="more simple" href="{% url 'contemporary_ventures:proj_apartment_cleaning' %}" title="View project">View project</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							
+							<li class="apartment">
+								<a href="{% url 'contemporary_ventures:service_house_cleaning' %}" title="House Cleaning">
+									<img src="images/samples/370x246/placeholder.jpg" alt="">
+								</a>
+								<div class="view align-center">
+									<div class="vertical-align-table">
+										<div class="vertical-align-cell">
+											<p>House Cleaning</p>
+											<a class="more simple" href="{% url 'contemporary_ventures:service_house_cleaning' %}" title="View project">View project</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							
+							<li class="industrial">
+								<a href="{% url 'contemporary_ventures:project_after_renovation_cleaning' %}" title="After Renovation Cleaning">
+									<img src="images/samples/370x246/placeholder.jpg" alt="">
+								</a>
+								<div class="view align-center">
+									<div class="vertical-align-table">
+										<div class="vertical-align-cell">
+											<p>After Renovation Cleaning</p>
+											<a class="more simple" href="{% url 'contemporary_ventures:project_after_renovation_cleaning' %}" title="View project">View project</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			
+			{% endblock %}
