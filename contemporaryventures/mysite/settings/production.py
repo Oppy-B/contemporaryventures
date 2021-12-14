@@ -34,7 +34,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY =os.environ.get("SECRET_KEY", '_s(evruxu)kf3qmlmm^4_i08vq+8-(+6(5u5cv6cm@70f-rve3')
+SECRET_KEY =os.environ.get("SECRET_KEY", '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =False
@@ -143,8 +143,8 @@ STATIC_URL = '/static/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.mailtrap.io'
-EMAIL_HOST_USER = '72eef0b9933536'
-EMAIL_HOST_PASSWORD = 'b85702730386ba'
+EMAIL_HOST_USER = '*******'
+EMAIL_HOST_PASSWORD = '*******'
 EMAIL_PORT = '2525'
 
 
