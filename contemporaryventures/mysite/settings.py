@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '_s(evruxu)kf3qmlmm^4_i08vq+8-(+6(5u5cv6cm@70f-rve3'
+SECRET_KEY = 'poppppp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -123,16 +123,6 @@ STATIC_URL = '/static/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.mailtrap.io'
-EMAIL_HOST_USER = '72eef0b9933536'
-EMAIL_HOST_PASSWORD = 'b85702730386ba'
+EMAIL_HOST_USER = 'Pppppp'
+EMAIL_HOST_PASSWORD = 'ppppoop'
 EMAIL_PORT = '2525'
-
-
-'''
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'donoppy@gmail.com'
-EMAIL_HOST_PASSWORD = 'computer010'
-'''
