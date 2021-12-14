@@ -143,8 +143,8 @@ STATIC_URL = '/static/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.mailtrap.io'
-EMAIL_HOST_USER = '72eef0b9933536'
-EMAIL_HOST_PASSWORD = 'b85702730386ba'
+EMAIL_HOST_USER = '******'
+EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = '2525'
 
 
